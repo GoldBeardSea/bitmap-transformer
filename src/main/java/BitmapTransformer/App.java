@@ -8,19 +8,18 @@ import java.util.Scanner;
 
 public class App {
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello User! Welcome to the Bitmap transformer, please follow the prompts";
     }
-
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What is the input filepath?");
+        System.out.println("What is the input filepath? (example /Users/username/directory/directory/bitmap-transformer/assets/psychedelic.png)");
         String inputFilePath = scanner.next();
-        System.out.println("What is the output filepath?");
+        System.out.println("What is the output filepath? (example /Users/username/directory/directory/bitmap-transformer/assets/psychedelic.png)");
 
         String outPutFilePath = scanner.next();
-        System.out.println("What transform do you want to use (options: Make thumbnail (1), Make greyscale (2))");
+        System.out.println("What transform do you want to use (options: Make thumbnail (1), Make greyscale (2), Make colorshift (3))");
         int transform = scanner.nextInt();
         if (transform == 1) {
             Bitmap image = new Bitmap(inputFilePath, outPutFilePath, "thumbnail");
@@ -35,6 +34,15 @@ public class App {
             try {
                 image.converterToBitmap();
                 image.makeGreyScale();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+
+        } else if (transform == 3) {
+            Bitmap image = new Bitmap(inputFilePath, outPutFilePath, "colorShift");
+            try {
+                image.converterToBitmap();
+                image.colorShift();
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
