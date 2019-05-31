@@ -1,4 +1,4 @@
-#Bitmap Transformer
+# Bitmap Transformer
 
 By [Tisha](https://github.com/tgreenidge) and [Tim](https://github.com/GoldBeardSea)
 
