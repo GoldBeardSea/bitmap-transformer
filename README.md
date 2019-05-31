@@ -22,6 +22,11 @@ The Greyscale image
 
 ![alt text](https://raw.githubusercontent.com/GoldBeardSea/bitmap-transformer/master/assets/newerImage.bmp "Original Psychedelic Image")
 
+The Color Swap
+
+![alt text](https://raw.githubusercontent.com/GoldBeardSea/bitmap-transformer/master/assets/psychedelictester.bmp "Original Psychedelic Image")
+
+
 More Transformations to come!
 
 Version 1.0.0

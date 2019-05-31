@@ -44,6 +44,7 @@ public class Bitmap {
     }
 
     public void makeGreyScale() {
+        //http://www.java2s.com/Tutorials/Java/Graphics_How_to/
         BufferedImage greyScaleImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
         for (int x = 0; x < image.getWidth(); ++x) {
             for (int y = 0; y < image.getHeight(); ++y) {
@@ -58,6 +59,17 @@ public class Bitmap {
             }
         }
         download((greyScaleImage));
+    }
+
+    public void colorShift() {
+        BufferedImage colorShift = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
+        for (int x = 0; x < image.getWidth(); ++x) {
+            for (int y = 0; y < image.getHeight(); ++y) {
+                int colorShiftVal = image.getRGB(x, y) ^ Color.WHITE.getBlue();
+                colorShift.setRGB(x, y, colorShiftVal);
+            }
+        }
+        download((colorShift));
     }
 
     public void download(BufferedImage img) {
