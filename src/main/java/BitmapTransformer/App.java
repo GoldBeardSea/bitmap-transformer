@@ -41,7 +41,7 @@ public class App {
         } else {
             System.out.println("Sorry that is not an option");
         }
-        System.out.println("Please rerun the application for further transformation");
+        System.out.println("Please rerun the application for further transformation, and check back for updates");
     }
 
 
