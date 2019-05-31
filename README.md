@@ -11,13 +11,16 @@ reach by going to INSERTLOCALPATH/bitmap-transformer/assets/.psychedelic.png. Th
 ### Transformations
 
 The original pic.
+
 ![alt text](https://github.com/GoldBeardSea/bitmap-transformer/blob/master/assets/psychedelic.png "Original Psychedelic Image")
 
 The thumbnail transformation.
+
 ![alt text](https://raw.githubusercontent.com/GoldBeardSea/bitmap-transformer/master/assets/newImage.bmp "Original Psychedelic Image")
 
 The Greyscale image
-![alt text](https://raw.githubusercontent.com/GoldBeardSea/bitmap-transformer/master/assets/newImage.bmp "Original Psychedelic Image")
+
+![alt text](https://raw.githubusercontent.com/GoldBeardSea/bitmap-transformer/master/assets/newerImage.bmp "Original Psychedelic Image")
 
 More Transformations to come!
 
