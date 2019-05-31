@@ -22,7 +22,6 @@ public class App {
         String outPutFilePath = scanner.next();
         System.out.println("What transform do you want to use (options: Make thumbnail (1), Make greyscale (2))");
         int transform = scanner.nextInt();
-        System.out.println(transform);
         if (transform == 1) {
             Bitmap image = new Bitmap(inputFilePath, outPutFilePath, "thumbnail");
             try {
@@ -42,7 +41,7 @@ public class App {
         } else {
             System.out.println("Sorry that is not an option");
         }
-
+        System.out.println("Please rerun the application for further transformation");
     }
 
 
