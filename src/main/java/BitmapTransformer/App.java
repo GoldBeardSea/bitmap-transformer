@@ -3,6 +3,9 @@
  */
 package BitmapTransformer;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
@@ -10,5 +13,37 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is the input filepath?");
+        String inputFilePath = scanner.next();
+        System.out.println("What is the output filepath?");
+
+        String outPutFilePath = scanner.next();
+        System.out.println("What transform do you want to use (options: Make thumbnail (1), Make greyscale (2))");
+        int transform = scanner.nextInt();
+        if (transform == 1) {
+            Bitmap image = new Bitmap(inputFilePath, outPutFilePath, "thumbnail");
+            try {
+                image.converterToBitmap();
+                image.createThumbnail();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        } else if (transform == 2) {
+            Bitmap image = new Bitmap(inputFilePath, outPutFilePath, "greyscale");
+            try {
+                image.converterToBitmap();
+                image.makeGreyScale();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        } else {
+            System.out.println("Sorry that is not an option");
+        }
+        System.out.println("Please rerun the application for further transformation");
     }
+
+
 }
+///Users/ttb/Downloads/index.jpg
